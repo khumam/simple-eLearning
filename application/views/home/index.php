@@ -7,10 +7,10 @@
             <div class="col-sm-12">
                 <ul class="nav justify-content-center">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">Github</a>
+                        <a class="nav-link active" href="https://github.com/sahmura/laraci">Github</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Documentations</a>
+                        <a class="nav-link" href="https://github.com/sahmura/laraci">Documentations</a>
                     </li>
                 </ul>
             </div>
