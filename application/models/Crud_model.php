@@ -21,7 +21,7 @@ class Crud_model extends CI_Model
 
     public function insertData($data, $table)
     {
-        $insert = $this->db->insert($data, $table);
+        $insert = $this->db->insert($table, $data);
         return $insert ? true : false;
     }
 
@@ -38,7 +38,7 @@ class Crud_model extends CI_Model
     
     */
 
-    public function getData($func, $table)
+    public function getData($func, $table, $row)
     {
 
         if ($func != null) {
@@ -72,7 +72,12 @@ class Crud_model extends CI_Model
         }
 
         $data = $this->db->get($table);
-        return $data ? $data->result_array() : false;
+
+        if ($row == true) {
+            return $data ? $data->row_array() : false;
+        } else {
+            return $data ? $data->result_array() : false;
+        }
     }
 
     /*

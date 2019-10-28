@@ -2,3 +2,12 @@ body {
 	font-family: 'Roboto',
 		sans-serif;
 }
+
+.line-auth {
+	border-top: 6px solid green;
+	width: 500px;
+	position: absolute;
+	left: 50%;
+	margin-left: -3px;
+	top: 0;
+}
