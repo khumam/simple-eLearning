@@ -1,3 +1,18 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <a class="navbar-brand" href="#">L A R A C I</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ml-auto">
+                <a class="nav-item nav-link" href="<?php echo base_url('login'); ?>">Login</a>
+                <a class="nav-item nav-link" href="<?php echo base_url('register'); ?>">Register</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
 <section class="py-5  d-flex align-items-center justify-content-center" style="min-height:100vh;">
     <div class="container">
         <div class="row">
