@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-sm-12">
                 <h1 class="text-center" style="font-weight: 300; font-size: 50pt;">W E L C O M E T O L A R A C I</h1>
-                <h2 class="text-center"><?php echo $this->session->userdata('fullname'); ?></h2>
+                <h2 class="text-center" style="font-weight: 300; font-size: 30pt;"><?php echo $this->session->userdata('fullname'); ?></h2>
             </div>
             <div class="col-sm-12">
                 <ul class="nav justify-content-center">
