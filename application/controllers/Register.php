@@ -13,7 +13,7 @@ class Register extends CI_Controller
 
     public function index()
     {
-        $data['title'] = "Register | LARACI";
+        $data['title'] = "Register | OPPIA";
 
         $this->form_validation->set_rules('register-fullname', 'Fullname', 'required');
         $this->form_validation->set_rules('register-email', 'Email', 'required|valid_email|is_unique[user.email]');

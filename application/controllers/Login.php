@@ -13,7 +13,7 @@ class Login extends CI_Controller
 
     public function index()
     {
-        $data['title'] = "Login | LARACI";
+        $data['title'] = "Login | OPPIA";
 
         $this->form_validation->set_rules('login-email', 'Email', 'required|valid_email');
         $this->form_validation->set_rules('login-password', 'Password', 'required');
