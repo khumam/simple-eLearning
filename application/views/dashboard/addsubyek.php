@@ -43,6 +43,10 @@
                             <textarea type="text" name="dashboard-tambahkelas-content" id="dashboard-tambahkelas-content" class="form-control" placeholder="Nama Kelas" required></textarea>
                         </div>
                         <div class="form-group">
+                            <label for="dashboard-kelas-video">Video</label>
+                            <input type="text" name="dashboard-kelas-video" id="dashboard-kelas-video" class="form-control" placeholder="https://" required>
+                        </div>
+                        <div class="form-group">
                             <button class="btn btn-info" type="submit">Tambah subyek</button>
                         </div>
                     </form>

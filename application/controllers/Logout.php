@@ -10,7 +10,8 @@ class Logout extends CI_Controller
         $userdata = [
             'id_user',
             'fullname',
-            'email'
+            'email',
+            'role'
         ];
 
         $this->session->unset_userdata($userdata);

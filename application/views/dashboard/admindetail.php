@@ -33,13 +33,6 @@
                             <h4><?php echo $class['class_name']; ?></h4>
                             <h6><?php echo $class['description']; ?></h6>
 
-                            <?php if ($this->session->userdata('role') != 'admmin') { ?>
-                                <?php if (!in_array($class['id'], $list_kelasku)) { ?>
-                                    <a href="<?php echo base_url('dashboard/daftarkelas/' . $class['id']); ?>" class="btn btn-success mt-4 btn-disabled">Daftar kelas</a>
-                                <?php } ?>
-                            <?php } ?>
-
-
                             <?php if ($this->session->userdata('role') == 'admin') { ?>
                                 <a href="<?php echo base_url('dashboard/tambahsubyek/' . $class['id']); ?>" class="btn btn-info mt-4">Tambah subyek</a>
                             <?php } ?>

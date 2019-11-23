@@ -29,7 +29,7 @@
                         <div class="col-xs-4 col-sm-12 col-md-4">
                             <div class="box">
                                 <div class="item dark">
-                                    <a href><img src="../assets/images/c6.jpg" class="w-full"></a>
+                                    <a href><img src="<?php echo base_url('assets/uploads/cover/' . $class['cover']); ?>" class="w-full"></a>
                                     <div class="item-overlay black-overlay w-full">
                                         <a href class="center text-md"><i class="fa fa-plus"></i></a>
                                     </div>

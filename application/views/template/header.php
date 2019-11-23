@@ -26,6 +26,8 @@
     <link rel="stylesheet" href="<?php echo base_url('assets/material-design-icons/material-design-icons.css'); ?>" type="text/css" />
 
     <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote.css" rel="stylesheet">
+
+    <script src="<?php echo base_url('assets/local/'); ?>playerjs.js" type="text/javascript"></script>
 </head>
 
 <body>

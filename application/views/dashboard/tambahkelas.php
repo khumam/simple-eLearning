@@ -27,7 +27,7 @@
                         </div>
                     <?php } ?>
 
-                    <form action="#" method="post">
+                    <form action="#" method="post" enctype="multipart/form-data">
                         <input type="text" name="dashboard-tambahkelas-iduser" value="<?php echo $this->session->userdata('id_user'); ?>" hidden>
                         <div class="form-group">
                             <label for="dashboard-tambahkelas-nama">Nama Kelas</label>
@@ -40,11 +40,14 @@
                         <div class="form-group">
                             <label for="dashboard-tambahkelas-level">Level</label>
                             <select class="form-control" name="dashboard-tambahkelas-level" id="dashboard-tambahkelas-level">
-                                <option value="sd">SD</option>
-                                <option value="smp">SMP</option>
-                                <option value="SMA">SMA</option>
-                                <option value="ekstra">Ekstra</option>
+                                <option value="Pemula">Pemula</option>
+                                <option value="Menengah">Menengah</option>
+                                <option value="Expert">Expert</option>
                             </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="dashboard-kelas-cover">Cover</label>
+                            <input type="file" name="dashboard-kelas-cover" id="dashboard-kelas-cover" class="form-control" placeholder="Cover" required>
                         </div>
                         <div class="form-group">
                             <button class="btn btn-info" type="submit">Tambah kelas</button>

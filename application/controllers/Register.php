@@ -28,6 +28,7 @@ class Register extends CI_Controller
                 'fullname' => htmlspecialchars($this->input->post('register-fullname'), true),
                 'email' => htmlspecialchars($this->input->post('register-email'), true),
                 'password' => password_hash($this->input->post('register-password'), PASSWORD_BCRYPT),
+                'role' => 'user',
                 'is_delete' => 0,
             ];
 

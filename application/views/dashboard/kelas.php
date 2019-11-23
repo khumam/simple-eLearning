@@ -30,7 +30,7 @@
                         <div class="col-xs-4 col-sm-12 col-md-4">
                             <div class="box">
                                 <div class="item dark">
-                                    <a href=""><img src="../assets/images/c6.jpg" class="w-full"></a>
+                                    <a href=""><img src="<?php echo base_url('assets/uploads/cover/' . $class['cover']); ?>" class="w-full"></a>
                                     <div class="item-overlay black-overlay w-full">
                                         <a href class="center text-md"><i class="fa fa-plus"></i></a>
                                     </div>
@@ -53,7 +53,8 @@
                                     </div>
                                     <div class="m-b h-2x"><a href class="_800">Kelas <?php echo $class['level']; ?></a></div>
                                     <p class="h-3x"><?php echo $class['description']; ?></p>
-                                    <a href="<?php echo base_url('dashboard/detail/' . $class['id']); ?>" class="btn btn-info">Detail</a>
+                                    <a href="<?php echo base_url('dashboard/admindetail/' . $class['id']); ?>" class="btn btn-info">Detail</a>
+                                    <a href="<?php echo base_url('dashboard/hapuskelas/' . $class['id']); ?>" class="btn btn-danger">Hapus</a>
                                 </div>
                             </div>
                         </div>

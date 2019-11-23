@@ -14,96 +14,103 @@
             <nav class="scroll nav-light">
 
                 <ul class="nav" ui-nav>
+
                     <li class="nav-header hidden-folded">
                         <small class="text-muted">Beranda</small>
                     </li>
 
                     <li>
-                        <a href="">
+                        <a href="<?php echo base_url('dashboard'); ?>">
                             <span class="nav-icon">
                                 <i class="material-icons">&#xe5c3;
                                     <span ui-include="'../assets/images/i_0.svg'"></span>
                                 </i>
                             </span>
-                            <span class="nav-text">Berandaku</span>
+                            <span class="nav-text">Beranda</span>
                         </a>
                     </li>
+                    <?php if ($this->session->userdata('role') == 'user') { ?>
+                        <li class="nav-header hidden-folded">
+                            <small class="text-muted">Kelasku</small>
+                        </li>
 
-                    <li class="nav-header hidden-folded">
-                        <small class="text-muted">Kelasku</small>
-                    </li>
+                        <li>
+                            <a href="<?php echo base_url('dashboard/katalog'); ?>">
+                                <span class="nav-icon">
+                                    <i class="material-icons">&#xe02f;
+                                        <span ui-include="'../assets/images/i_0.svg'"></span>
+                                    </i>
+                                </span>
+                                <span class="nav-text">Katalog Kelas</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="<?php echo base_url('dashboard/kelasku'); ?>">
+                                <span class="nav-icon">
+                                    <i class="material-icons">&#xe54b;
+                                        <span ui-include="'../assets/images/i_0.svg'"></span>
+                                    </i>
+                                </span>
+                                <span class="nav-text">Kelasku</span>
+                            </a>
+                        </li>
 
-                    <li>
-                        <a href="<?php echo base_url('dashboard/katalog'); ?>">
-                            <span class="nav-icon">
-                                <i class="material-icons">&#xe02f;
-                                    <span ui-include="'../assets/images/i_0.svg'"></span>
-                                </i>
-                            </span>
-                            <span class="nav-text">Katalog Kelas</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <span class="nav-icon">
-                                <i class="material-icons">&#xe54b;
-                                    <span ui-include="'../assets/images/i_0.svg'"></span>
-                                </i>
-                            </span>
-                            <span class="nav-text">Kelasku</span>
-                        </a>
-                    </li>
+                        <li class="nav-header hidden-folded">
+                            <small class="text-muted">Pengaturan</small>
+                        </li>
 
-                    <li class="nav-header hidden-folded">
-                        <small class="text-muted">Pengaturan</small>
-                    </li>
+                        <li class="hidden-folded">
+                            <a href="docs.html">
+                                <span class="nav-icon">
+                                    <i class="material-icons">&#xe7fd;
+                                        <span ui-include="'../assets/images/i_0.svg'"></span>
+                                    </i>
+                                </span>
+                                <span class="nav-text">Pengaturan akun</span>
+                            </a>
+                        </li>
+                    <?php } ?>
+                    <?php if ($this->session->userdata('role') == 'admin') { ?>
 
-                    <li class="hidden-folded">
-                        <a href="docs.html">
-                            <span class="nav-icon">
-                                <i class="material-icons">&#xe7fd;
-                                    <span ui-include="'../assets/images/i_0.svg'"></span>
-                                </i>
-                            </span>
-                            <span class="nav-text">Pengaturan akun</span>
-                        </a>
-                    </li>
+                        <li class="nav-header hidden-folded">
+                            <small class="text-muted">Admin Area</small>
+                        </li>
 
-                    <li class="nav-header hidden-folded">
-                        <small class="text-muted">Admin Area</small>
-                    </li>
+                        <li class="hidden-folded">
+                            <a href="<?php echo base_url('dashboard/kelas'); ?>">
+                                <span class="nav-icon">
+                                    <i class="material-icons">&#xe150;
+                                        <span ui-include="'../assets/images/i_0.svg'"></span>
+                                    </i>
+                                </span>
+                                <span class="nav-text">Kelola Kelas</span>
+                            </a>
+                        </li>
 
-                    <li class="hidden-folded">
-                        <a href="<?php echo base_url('dashboard/kelas'); ?>">
-                            <span class="nav-icon">
-                                <i class="material-icons">&#xe150;
-                                    <span ui-include="'../assets/images/i_0.svg'"></span>
-                                </i>
-                            </span>
-                            <span class="nav-text">Kelola Kelas</span>
-                        </a>
-                    </li>
+                        <li class="hidden-folded">
+                            <a href="<?php echo base_url('dashboard/users'); ?>">
+                                <span class="nav-icon">
+                                    <i class="material-icons">&#xe8d3;
+                                        <span ui-include="'../assets/images/i_0.svg'"></span>
+                                    </i>
+                                </span>
+                                <span class="nav-text">Kelola User</span>
+                            </a>
+                        </li>
 
-                    <li class="hidden-folded">
-                        <a href="<?php echo base_url('dashboard/users'); ?>">
-                            <span class="nav-icon">
-                                <i class="material-icons">&#xe8d3;
-                                    <span ui-include="'../assets/images/i_0.svg'"></span>
-                                </i>
-                            </span>
-                            <span class="nav-text">Kelola User</span>
-                        </a>
-                    </li>
+                    <?php } ?>
+                    <?php if ($this->session->userdata('role') == 'user') { ?>
 
-                    <li class="nav-header hidden-folded">
-                        <small class="text-muted">Bantuan</small>
-                    </li>
+                        <li class="nav-header hidden-folded">
+                            <small class="text-muted">Bantuan</small>
+                        </li>
 
-                    <li class="hidden-folded">
-                        <a href="docs.html">
-                            <span class="nav-text">Hubungi Kami</span>
-                        </a>
-                    </li>
+                        <li class="hidden-folded">
+                            <a href="docs.html">
+                                <span class="nav-text">Hubungi Kami</span>
+                            </a>
+                        </li>
+                    <?php } ?>
                     <li class="hidden-folded">
                         <a href="<?php echo base_url('logout'); ?>">
                             <span class="nav-text">Logout</span>

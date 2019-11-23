@@ -32,15 +32,19 @@
                         <input type="text" name="dashboard-tambahkelas-iduser" value="<?php echo $this->session->userdata('id_user'); ?>" hidden>
                         <div class="form-group">
                             <label for="dashboard-tambahkelas-nama">Nama Subyek</label>
-                            <input type="text" name="dashboard-tambahkelas-nama" id="dashboard-tambahkelas-nama" class="form-control" placeholder="Nama Kelas" required value="<?php echo $materi['subyek_name'];?>">
+                            <input type="text" name="dashboard-tambahkelas-nama" id="dashboard-tambahkelas-nama" class="form-control" placeholder="Nama Kelas" required value="<?php echo $materi['subyek_name']; ?>">
                         </div>
                         <div class="form-group">
                             <label for="dashboard-tambahkelas-deskripsi">Deskripsi</label>
-                            <textarea type="text" name="dashboard-tambahkelas-deskripsi" id="dashboard-tambahkelas-deskripsi" class="form-control" placeholder="Deskripsi" required><?php echo $materi['description'];?></textarea>
+                            <textarea type="text" name="dashboard-tambahkelas-deskripsi" id="dashboard-tambahkelas-deskripsi" class="form-control" placeholder="Deskripsi" required><?php echo $materi['description']; ?></textarea>
                         </div>
                         <div class="form-group">
                             <label for="dashboard-tambahkelas-content">Konten</label>
-                            <textarea type="text" name="dashboard-tambahkelas-content" id="dashboard-tambahkelas-content" class="form-control" placeholder="Nama Kelas" required><?php echo $materi['content'];?></textarea>
+                            <textarea type="text" name="dashboard-tambahkelas-content" id="dashboard-tambahkelas-content" class="form-control" placeholder="Nama Kelas" required><?php echo $materi['content']; ?></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="dashboard-kelas-video">Video</label>
+                            <input type="text" name="dashboard-kelas-video" id="dashboard-kelas-video" class="form-control" placeholder="https://" value="<?php echo $materi['url_video']; ?>" required>
                         </div>
                         <div class="form-group">
                             <button class="btn btn-info" type="submit">Edit subyek</button>

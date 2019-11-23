@@ -37,6 +37,7 @@ class Login extends CI_Controller
                         'id_user' => $userdata['id_user'],
                         'fullname' => $userdata['fullname'],
                         'email' => $userdata['email'],
+                        'role' => $userdata['role']
                     ]
                 );
                 redirect('dashboard');

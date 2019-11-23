@@ -62,6 +62,7 @@
     $(document).ready(function() {
         $('#dashboard-tambahkelas-content').summernote({
             height: 150,
+            popover: false
         });
     });
 </script>
