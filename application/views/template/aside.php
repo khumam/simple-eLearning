@@ -60,7 +60,7 @@
                         </li>
 
                         <li class="hidden-folded">
-                            <a href="docs.html">
+                            <a href="<?php echo base_url('dashboard/editakun'); ?>">
                                 <span class="nav-icon">
                                     <i class="material-icons">&#xe7fd;
                                         <span ui-include="'../assets/images/i_0.svg'"></span>

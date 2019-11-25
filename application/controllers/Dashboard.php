@@ -497,4 +497,43 @@ class Dashboard extends CI_Controller
             redirect('dashboard/kelas');
         }
     }
+
+    public function editakun()
+    {
+        $data['title'] = 'Sunting akun';
+
+        $this->form_validation->set_rules('edit-fullname', 'Fullname', 'required');
+
+        if ($this->form_validation->run() == false) {
+            $this->load->view('template/header', $data);
+            $this->load->view('template/aside', $data);
+            $this->load->view('dashboard/editakun', $data);
+            $this->load->view('template/footer', $data);
+        } else {
+            $dataChange = [
+                'fullname' => htmlspecialchars($this->input->post('edit-fullname'), true),
+                'email' => htmlspecialchars($this->input->post('edit-email'), true),
+            ];
+
+            $func['identifier'] = [
+                'id_user' => htmlspecialchars($this->input->post('edit-id'), true)
+            ];
+
+            $update = $this->crud->updateData($dataChange, $func, 'user');
+
+            if ($update) {
+                $this->session->set_userdata(
+                    [
+                        'fullname' => $dataChange['fullname'],
+                        'email' => $dataChange['email'],
+                    ]
+                );
+                $this->session->set_flashdata('success', 'Update account sucessfully');
+                redirect('dashboard/editakun');
+            } else {
+                $this->session->set_flashdata('danger', 'Failed update account sucessfully');
+                redirect('dashboard/editakun');
+            }
+        }
+    }
 }
